@@ -7,5 +7,5 @@ public class MainViewModel extends ViewModel {
 
     public MutableLiveData<String> editString = new MutableLiveData<>();
 
-
+    public MutableLiveData<Boolean> Compound = new MutableLiveData<>();
 }

@@ -27,6 +27,35 @@
         android:text="@string/button_message"
         android:id="@+id/mybutton"
         />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you drink coffee?"
+        android:id="@+id/checkbox"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you drink coffee?"
+        android:id="@+id/radiobutton"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you drink coffee?"
+        android:id="@+id/switch1"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/alg"
+        android:id="@+id/myimageview"/>
+
+    <ImageButton
+        android:layout_width="840px"
+        android:layout_height="600px"
+        android:src="@drawable/alg"
+        android:id="@+id/myimagebutton"/>
 
 
 

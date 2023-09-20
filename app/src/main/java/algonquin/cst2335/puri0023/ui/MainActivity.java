@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import algonquin.cst2335.puri0023.data.MainViewModel;
 import algonquin.cst2335.puri0023.databinding.ActivityMainBinding;
@@ -40,6 +41,55 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        model.Compound.observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean selected) {
+
+            }
+        });
+
+        model.Compound.observe(this, selected -> {
+            variableBinding.checkbox.setChecked(selected);
+            variableBinding.radiobutton.setChecked(selected);
+            variableBinding.switch1.setChecked(selected);
+        });
+        variableBinding.checkbox.setOnCheckedChangeListener(( btn, isChecked) -> {
+            model.Compound.setValue(isChecked);
+        });
+
+        variableBinding.switch1.setOnCheckedChangeListener(( btn, isChecked) -> {
+            model.Compound.setValue(isChecked);
+        });
+
+        variableBinding.radiobutton.setOnCheckedChangeListener(( btn, isChecked) -> {
+            model.Compound.setValue(isChecked);
+        });
+
+
+        variableBinding.myimageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Handle ImageView click here
+                // You can add your custom logic here
+                Toast.makeText(MainActivity.this, "ImageView Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // ImageButton onClickListener
+        variableBinding.myimagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Handle ImageButton click here
+                // Get the width and height of the ImageButton
+                int width = variableBinding.myimagebutton.getWidth();
+                int height = variableBinding.myimagebutton.getHeight();
+
+                // Show a Toast message with the width and height
+                Toast.makeText(MainActivity.this, "The width = " + width + " and height = " + height, Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
     }

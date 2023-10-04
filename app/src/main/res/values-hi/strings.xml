@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ऋषभ की एंड्राइड लैब्स</string>
+    <string name="spin_message">स्पिन ध्वज</string>
+    <string name="Button1">बटन 1</string>
+    <string name="Button2">बटन 2</string>
+    <string name="Button3">बटन 3</string>
+</resources>
